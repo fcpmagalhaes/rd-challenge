@@ -12,13 +12,14 @@
   border-bottom: 1px solid var(--gray30);
   padding: 0 108px;
 
+  @media (max-width: 768px) {
+    padding: 0 46px;
+  }
+  
   @media (max-width: 576px) {
     padding: 0 16px;
   }
 
-  @media (max-width: 768px) {
-    padding: 0 46px;
-  }
 
   .logo {
     width: 236px;
