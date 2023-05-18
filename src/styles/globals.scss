@@ -2,6 +2,10 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+body {
+  color: var(--gray100);
   background-color: var(--gray10);
   font-family: var(--nunito);
   transition: all 100ms linear;
@@ -23,6 +27,4 @@
 
   --nunito: Nunito Sans, sans-serif;
   --darker: Darker Grotesque, sans-serif;
-
-
 }
