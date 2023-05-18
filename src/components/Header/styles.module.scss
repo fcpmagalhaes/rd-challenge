@@ -1,0 +1,122 @@
+.navbarContainer {
+  height: 80px;
+  display: flex;
+  align-items: center;
+  background-color: var(--wite);
+  justify-content: space-between;
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+
+  border-bottom: 2px solid blue;
+
+  .logo {
+    background: red;
+    width: 136px;
+    height: 25px;
+
+    @media (min-width: 500px) {
+      background: green;
+      width: 236px;
+      height: 55px;
+    }
+  }
+
+  .menuIcon {
+    // display: block;
+    // position: absolute;
+    // top: 0;
+    // right: 0;
+    // transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--primary60);
+
+    @media (min-width: 1156px) {
+      display: none;
+    }
+  }
+
+  .rightArea {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    .navMenu {
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      list-style: none;
+      text-align: center;
+
+      @media (min-width: 1156px) {
+        background: var(--primary60);
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        padding-top: 36px;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+      }
+
+      .navItem {
+        display: flex;
+        align-items: center;
+        height: 80px;
+
+        @media (max-width: 1156px) {
+          position: relative;
+          margin: 0 auto;
+          width: 95%;
+          height: unset;
+          background: var(--wite);
+          border-top: 1px solid var(--gray30);
+          &:first-child {
+            border-top: none;
+          }
+        }
+
+        .navLinks {
+          color: var(--gray100);
+          text-decoration: none;
+          padding: 0.5rem 1rem;
+          &:hover {
+            background-color: var(--gray10);
+            transition: all 0.2s ease-out;
+          }
+
+          @media (max-width: 1156px) {
+            text-align: left;
+            padding-left: 2rem;
+            width: 100%;
+            display: table;
+
+            &:hover {
+              background-color: var(--gray10);
+              border-radius: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .navMenuActive {
+      left: 0;
+      opacity: 1;
+      transition: all 0.5s ease;
+      z-index: 1;
+      margin-right: 0;
+
+      @media (min-width: 1156px) {
+        display: none;
+      }
+    }
+
+    .RightButtonsDesktop {
+
+    }
+
+  }
+}
