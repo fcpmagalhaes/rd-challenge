@@ -2,38 +2,46 @@
   height: 80px;
   display: flex;
   align-items: center;
-  background-color: var(--wite);
+  background-color: var(--white);
   justify-content: space-between;
   font-size: 16px;
   font-weight: 700;
   width: 100%;
+  min-width: 360px;
 
-  border-bottom: 2px solid blue;
+  border-bottom: 1px solid var(--gray-30);
+  padding: 0 108px;
+
+  @media (max-width: 576px) {
+    padding: 0 16px;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 46px;
+  }
 
   .logo {
-    background: red;
-    width: 136px;
-    height: 25px;
+    width: 236px;
+    height: 55px;
 
-    @media (min-width: 500px) {
-      background: green;
-      width: 236px;
-      height: 55px;
+    @media (max-width: 768px) {
+      width: 182px;
+      height: 34px;
+    }
+
+    @media (max-width: 576px) {
+      width: 136px;
+      height: 25px;
     }
   }
 
   .menuIcon {
-    // display: block;
-    // position: absolute;
-    // top: 0;
-    // right: 0;
-    // transform: translate(-100%, 60%);
-    font-size: 1.8rem;
-    cursor: pointer;
-    color: var(--primary60);
-
-    @media (min-width: 1156px) {
-      display: none;
+    display: none;
+    @media (max-width: 1156px) {
+      display: block;
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: var(--primary60);
     }
   }
 
@@ -48,8 +56,8 @@
       list-style: none;
       text-align: center;
 
-      @media (min-width: 1156px) {
-        background: var(--primary60);
+      @media (max-width: 1156px) {
+        background: var(--white);
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -71,7 +79,7 @@
           margin: 0 auto;
           width: 95%;
           height: unset;
-          background: var(--wite);
+          background: var(--white);
           border-top: 1px solid var(--gray30);
           &:first-child {
             border-top: none;
@@ -99,24 +107,40 @@
             }
           }
         }
+
+        .rightButtonsMobile {
+          display: none;
+          @media (max-width: 1156px) {
+            width: 100%;
+            display: flex;
+            margin: 0 auto;
+            background: var(--gray10);
+            justify-content: center;
+            align-items: center;
+            height: 88px;
+            border-top: 1px solid var(--gray30);
+            border-bottom: 1px solid var(--gray30);
+          }
+
+        }
       }
     }
 
     .navMenuActive {
-      left: 0;
-      opacity: 1;
-      transition: all 0.5s ease;
-      z-index: 1;
-      margin-right: 0;
-
-      @media (min-width: 1156px) {
-        display: none;
+      @media (max-width: 1156px) {
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+        margin-right: 0;
       }
     }
 
     .RightButtonsDesktop {
-
+      display: flex;
+      @media (max-width: 1156px) {
+        display: none;
+      }
     }
-
   }
 }

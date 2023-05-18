@@ -1,10 +1,9 @@
-import { useState } from 'react';
-import Link from 'next/link';
+import { useState } from 'react'
+import Link from 'next/link'
 import Image from "next/image"
-import Button from '@/components/Button';
-import Dropdown from '@/components/Dropdown';
+import Button from '@/components/Button'
+import Dropdown from '@/components/Dropdown'
 import styles from './styles.module.scss'
-import stylesContainer from '@/components/SectionContainer/styles.module.scss'
 
 function Header() {
   const [click, setClick] = useState(false);
@@ -59,7 +58,7 @@ function Header() {
   };
 
   return (
-    <div className={stylesContainer.sectionContainer}>
+    
     
       <div className={styles.navbarContainer}>
         <Link href='/' onClick={closeMobileMenu}>
@@ -128,9 +127,9 @@ function Header() {
 
           </ul>
 
-          {/* <div className={styles.RightButtonsDesktop}>
+          <div className={styles.RightButtonsDesktop}>
             <Buttons/>
-          </div> */}
+          </div>
 
         </div>
 
@@ -139,7 +138,6 @@ function Header() {
         </div>
       
       </div>
-    </div>
   );
 }
 
