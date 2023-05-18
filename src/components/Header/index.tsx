@@ -120,13 +120,11 @@ function Header() {
                 Menu 5
               </Link>
             </li>
-
-            {/* <li className={styles.rightButtonsMobile}>
+            <li className={styles.rightButtonsMobile}>
               <Buttons/>
-            </li> */}
-
+            </li>
           </ul>
-
+              
           <div className={styles.RightButtonsDesktop}>
             <Buttons/>
           </div>
