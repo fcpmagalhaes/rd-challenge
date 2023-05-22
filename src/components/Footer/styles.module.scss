@@ -1,0 +1,74 @@
+.mainSection {
+  display: block;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 360px;
+  padding: 0 16px;
+
+  @media (min-width: 576px) {
+    padding: 0 28px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 54px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 108px;
+  }
+
+  .rdLogo {
+    text-align: center;
+    margin: 24px 0;
+
+    @media (min-width: 576px) {
+      text-align: left;
+    }
+  }
+
+  .divider {
+    border-bottom: 1px solid #78EDF2;
+  }
+
+  .privacity {
+    margin-bottom: 40px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    text-align: center;
+
+    @media (min-width: 576px) {
+      margin-top: 24px;
+      text-align: right;
+    }
+
+    .privacyLink {
+      text-decoration: underline;
+      color: var(--gray100);
+    }
+  }
+
+  .listContainer {
+    text-align: center;
+
+    @media (min-width: 576px) {
+      text-align: right;
+    }
+
+    .icons {
+      display: inline-flex;
+      margin: 24px 0;
+      list-style:none;
+      .icon {
+        margin: 0 8px;
+      }
+  
+    }
+  }
+
+}
+
+.background {
+  background: var(--primary60);
+}

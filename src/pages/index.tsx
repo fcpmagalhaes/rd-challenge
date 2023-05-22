@@ -3,6 +3,7 @@ import AccountSection from "@/components/Sections/AccountSection"
 import BenefitsSection from "@/components/Sections/BenefitsSection"
 import FormSection from "@/components/Sections/FormSection"
 import ListSection from "@/components/Sections/ListSection"
+import Footer from "@/components/Footer"
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <ListSection/>
       <BenefitsSection/>
       <AccountSection/>
+      <Footer/>
     </>
   )
 }

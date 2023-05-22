@@ -8,6 +8,7 @@ export const colors = {
   black: '#000000',
   highligh50:'#F4CA6D',
   highligh60:'#F2BF4E',
+  primary40: '#78EDF2',
   primary50: '#06D9DF',
   primary60: '#19C1CE',
   primary100:'#0B485B',
