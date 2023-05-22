@@ -50,14 +50,11 @@
   }
 
   .mobileCards {
-    display: flex;
+    display: contents;
     @media (min-width: 576px) {
-      display: contents;
+      display: none;
     }
-
   }
-  
-
 }
 
 .background {

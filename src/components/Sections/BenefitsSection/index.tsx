@@ -1,9 +1,7 @@
 import { Row, Col } from 'antd'
 import styles from './styles.module.scss'
-import container from '@/components/SectionContainer/styles.module.scss'
-import Link from 'next/link';
-import Image from 'next/image';
 import BenefitCard from '@/components/BenefitCard';
+import { Carousel } from 'antd';
 
 const benefitItems = [
   {
@@ -50,7 +48,7 @@ function BenefitsSection() {
             </div>
           </Col>
           <div className={styles.desktopCards}>
-            {
+            { 
               benefitItems.map((item, index) => (
                 <Col xs={24} sm={12} md={8} key={index}>
                   <BenefitCard data={item} />
@@ -59,7 +57,15 @@ function BenefitsSection() {
             }
           </div>
           <div className={styles.mobileCards}>
-            123123
+            <Col span={24}>  
+              <Carousel autoplay>
+                {
+                  benefitItems.map((item, index) => (
+                    <BenefitCard data={item} key={index}/>
+                  ))
+                }
+              </Carousel>
+            </Col>
           </div>
           
         </Row>
