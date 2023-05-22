@@ -108,6 +108,7 @@
 
 .background {
   position: relative;
+  background: var(--gray10);
 
   &:after {
     content: '';
