@@ -10,7 +10,7 @@ function Button({color, width, size, children, ...rest}: StyledButtonProps ) {
   return (
     <button 
       className={`${styles.default} ${styles[size]} ${styles[color]}`}
-      style={{width: width ? `${width}px` : 'initial'}}
+      style={{width: width ? `${width}px` : '100%'}}
       {...rest}
     >
       {children}
