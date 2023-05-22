@@ -3,8 +3,6 @@
   margin: 0 auto;
   max-width: 1440px;
   min-width: 360px;
-  // background: var(--gray10);
-  // background-color: red;
   padding: 0 16px;
 
   @media (min-width: 576px) {
@@ -20,43 +18,60 @@
   }
   
 
-  .primaryColor {
-    color: var(--primary60);
-    text-decoration: underline;
-  }
 
-  .title {
-    font-family: var(--darker);
-    font-style: normal;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 110%;
-    
-    margin-top: 40px;
-    margin-bottom: 8px;
-    
+  .box{
+    background-image: url('/images/background/bg.svg');
+    background-repeat: no-repeat;
+    background-position: center; 
+
+    margin-top: 52px;
+    margin-bottom: 64px;
+    color: var(--white);
+    text-align: center;
+    width: 100%;
+    padding: 0 16px;
+
     @media (min-width: 576px) {
+      margin-top: 120px;
+      margin-bottom: 120px;
+    }
+    
+    .title {
+      font-family: var(--darker);
+      font-style: normal;
+      font-weight: 900;
       font-size: 32px;
-      margin-top: 222px;
-      margin-bottom: 24px;
+      line-height: 100%;
+      display: inline-block;
+      margin-top: 40px;
+      
+      @media (min-width: 576px) {
+        margin-top: 80px;
+        font-size: 40px;
+        max-width: 600px;
+      }
+    }
+
+    .description {
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 150%;
+      margin-top: 16px;
+      display: inline-block;
+
+      @media (min-width: 576px) {
+        margin-top: 24px;
+        max-width: 808px;
+      }
+    }
+    .createAccount {
+      margin-top: 24px;
+      padding-bottom: 40px;
+      @media (min-width: 576px) {
+        margin-top: 40px;
+        padding-bottom: 80px;
+      }
     }
   }
-
-  .desktopCards {
-    display: none;
-    @media (min-width: 576px) {
-      display: contents;
-    }
-  }
-
-  .mobileCards {
-    display: contents;
-    @media (min-width: 576px) {
-      display: none;
-    }
-  }
-}
-
-.background {
-  background: var(--white);
 }

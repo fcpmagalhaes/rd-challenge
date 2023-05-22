@@ -1,24 +1,26 @@
-import { Row, Col } from 'antd'
 import styles from './styles.module.scss'
-import BenefitCard from '@/components/BenefitCard';
-import { Carousel } from 'antd';
-
+import Button from '@/components/Button';
 
 
 function AccountSection() {
   return (
-    <div className={styles.background}>
-      <div className={styles.mainSection}>
-        <Row gutter={[16, 16]}>
-
-          <Col span={24}>
-            <div className={styles.title}>
-              A ferramenta de Automação de Marketing líder na América Latina
-            </div>
-          </Col>
-          
-          
-        </Row>
+    <div className={styles.mainSection}>
+      <div className={styles.box}> 
+          <div className={styles.title}>
+            Por que mais de 25.000 empresas escolheram o RD Station?
+          </div>
+          <div className={styles.description}>
+            Combinamos nossos produtos de Marketing e Vendas com pessoas que se importam com seus resultados e um ecossistema que apoia o seu negócio do planejamento à prática.
+          </div>
+          <div className={styles.createAccount}>
+            <Button
+                color="highligh"
+                width={215}
+                size="small"
+              >
+                Criar conta gratuita
+            </Button>
+          </div>
       </div>
     </div>
   );
