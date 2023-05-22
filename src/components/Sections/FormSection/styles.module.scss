@@ -1,7 +1,6 @@
 .mainSection {
   background: var(--gray10);
   position: relative;
-  border-top: 1px solid var(--gray30);
   // height: 650px;
 
   &:after {
@@ -36,11 +35,13 @@
     }
 
     .primaryColor {
+      font-family: var(--darker);
       color: var(--primary60)
     }
   }
 
   .subtitle {
+    font-family: var(--nunito);
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
@@ -92,6 +93,7 @@
   }
 
   .subtitle {
+    font-family: var(--nunito);
     font-weight: 400;
     font-size: 16px;
     line-height: 150%;

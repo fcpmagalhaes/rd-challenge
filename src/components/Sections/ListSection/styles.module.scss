@@ -1,0 +1,129 @@
+.mainSection {
+  display: block;
+  margin: 0 auto;
+  max-width: 1440px;
+  min-width: 360px;
+  // background: var(--gray10);
+  // background-color: red;
+  padding: 0 16px;
+
+  @media (min-width: 576px) {
+    padding: 0 28px;
+  }
+
+  @media (min-width: 768px) {
+    padding: 0 54px;
+  }
+
+  @media (min-width: 992px) {
+    padding: 0 108px;
+  }
+  
+
+  .primaryColor {
+    color: var(--primary60);
+    text-decoration: underline;
+  }
+
+  .title {
+    font-family: var(--darker);
+    font-style: normal;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 110%;
+    
+    margin-top: 40px;
+    margin-bottom: 8px;
+    
+    @media (min-width: 576px) {
+      font-size: 32px;
+      margin-top: 222px;
+      margin-bottom: 24px;
+
+
+    //   margin-bottom: 40px;
+    //   font-size: 56px;
+    //   padding-top: 106px; 
+    }
+
+    
+  }
+
+  .subtitle {
+    font-family: var(--nunito);
+    font-size: 14px;
+    line-height: 120%;
+    font-style: normal;
+    font-weight: 400;
+
+    margin-bottom: 24px;
+
+    @media (min-width: 576px) {
+      font-size: 20px;
+      margin-bottom: 24px;
+    }
+  }
+
+  .list {
+    list-style-type: none;
+    li {
+      font-family: var(--nunito);
+      font-style: normal;
+      font-size: 16px;
+      line-height: 150%;
+      margin-bottom: 24px;
+
+      i {
+        color: var(--primary60);
+        margin-right: 19px;
+      }
+    }
+  }
+
+  .image {
+    text-align: center;
+  
+    @media (min-width: 768px) {
+      margin-top: 222px;
+      text-align: left;
+    }
+    .imageContent {
+      width: 100%;
+      height: 100%;
+
+      @media (min-width: 576px) {
+        width: 80%;
+        height: 80%;
+      }
+      @media (min-width: 768px) {
+        width: 70%;
+        height: 70%;
+        max-width: 600px;
+        max-height: 600px;
+        margin-bottom: 80px;
+      }
+    }
+  }
+}
+
+.background {
+  position: relative;
+
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-right: 55vw solid transparent;
+    border-bottom: 96px solid var(--white);
+    width: 0;
+
+    @media (min-width: 576px) {
+      border-bottom: 300px solid var(--white);
+    }
+
+    @media (min-width: 768px) {
+      border-bottom: 433px solid var(--white);
+    }
+  }
+}
