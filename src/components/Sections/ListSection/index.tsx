@@ -1,6 +1,5 @@
 import { Row, Col } from 'antd'
 import styles from './styles.module.scss'
-import container from '@/components/SectionContainer/styles.module.scss'
 import Link from 'next/link';
 import Image from 'next/image';
 

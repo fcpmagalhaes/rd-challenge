@@ -5,6 +5,19 @@
   max-width: 496px;
   box-shadow: 0px 4px 12px rgba(33, 36, 41, 0.14);
   border-radius: 2px;
+  z-index: 2;
+  margin-bottom: 40px;
+
+  @media (min-width: 576px) {
+    position: relative;
+  }
+
+  @media (min-width: 768px) {
+    top: 10px;
+    position: absolute;
+    margin-bottom: 0;
+  }
+
 
   .formHeader {
     padding: 0 24px;

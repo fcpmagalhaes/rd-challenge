@@ -1,27 +1,34 @@
 import { Row, Col } from 'antd'
 import styles from './styles.module.scss'
-import container from '@/components/SectionContainer/styles.module.scss'
+import LeadForm from '@/components/LeadForm'
 
 
 function FormSection() {
   return (
+    
     <>
-      <Row className={styles.mainSection}>
-        <div className={container.sectionContainer}>
-        <Col xs={24} sm={20} md={12}>
-              <div className={styles.title}>
-                Gere mais <span className={styles.primaryColor}>oportunidades</span> para seu negócio
-              </div>
-              <div className={styles.subtitle}>
-                O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.
-              </div>
-            </Col>
-        </div>
-      </Row>
-
-      <Row className={styles.secondSection}>
-        <div className={container.sectionContainer}>
-          <Col xs={24} sm={20} md={12}>
+    <div className={styles.background}>
+      <div className={styles.mainSection}>
+        <Row gutter={[16, 16]}>
+          <Col sm={24} md={14}>
+            <div className={styles.title}>
+              Gere mais <span className={styles.primaryColor}>oportunidades</span> para seu negócio
+            </div>
+            <div className={styles.subtitle}>
+              O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.
+            </div>
+          </Col >
+          <Col sm={24} md={10}>
+            <LeadForm />
+          </Col>
+        </Row>
+      </div>
+    </div>
+     
+    <div className={styles.backgroundTwo}>
+      <div className={styles.secondSection}>
+        <Row>
+          <Col xs={24} md={14}>
               <div className={styles.title}>
                 Estaremos juntos desde o primeiro passo!
               </div>
@@ -32,8 +39,10 @@ function FormSection() {
                 <b>Estaremos com você do planejamento até a prática!</b>
               </div>
             </Col>
-        </div>
-      </Row>
+        </Row>
+      </div>
+    </div>
+    
     </>
   );
 }
