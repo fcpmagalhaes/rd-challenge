@@ -8,6 +8,8 @@
   font-weight: 700;
   width: 100%;
   min-width: 360px;
+  position: fixed;
+  z-index: 2;
 
   border-bottom: 1px solid var(--gray30);
   padding: 0 108px;
