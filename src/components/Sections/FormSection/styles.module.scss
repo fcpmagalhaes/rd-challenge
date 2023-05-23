@@ -134,19 +134,19 @@
     top: 80px;
     right: 0;
     border-left: 55vw solid transparent;
-    border-top: 96px solid var(--white);
+    border-top: 13vh solid var(--white);
     width: 0;
 
     @media (min-width: 424px) {
-      border-top: 50px solid var(--white);
+      border-top: 7vh solid var(--white);
     }
     
     @media (min-width: 576px) {
-      border-top: 150px solid var(--white);
+      border-top: 18vh solid var(--white);
     }
 
     @media (min-width: 768px) {
-      border-top: 433px solid var(--white);
+      border-top: 33vh solid var(--white);
     }
   }
 }
