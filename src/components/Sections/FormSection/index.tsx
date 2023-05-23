@@ -18,7 +18,7 @@ function FormSection() {
               O RD Station Marketing é um software para sua empresa fazer campanhas melhores, nutrir Leads, gerar oportunidades comerciais qualificadas e alcançar mais resultados.
             </div>
           </Col >
-          <Col sm={24} md={10}>
+          <Col sm={24} md={10} className={styles.alignFormMobile}>
             <LeadForm />
           </Col>
         </Row>

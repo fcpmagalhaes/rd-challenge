@@ -3,20 +3,28 @@
   margin: 0 auto;
   max-width: 1440px;
   min-width: 360px;
-  // background: var(--gray10);
-  // background-color: red;
-  padding: 0 16px;
+  padding: 80px 16px 0 16px;
 
   @media (min-width: 576px) {
-    padding: 0 28px;
+    padding: 80px 28px 0 28px;
   }
 
   @media (min-width: 768px) {
-    padding: 0 54px;
+    padding: 80px 54px 0 54px;
   }
 
   @media (min-width: 992px) {
-    padding: 0 108px;
+    padding: 80px 108px 0 108px;
+  }
+
+  .alignFormMobile {
+    display: block;
+    margin: 0 auto;
+    flex: none;
+
+    @media (min-width: 768px) {
+      flex: auto;
+    }
   }
 
   .title {
@@ -119,19 +127,22 @@
 .background {
   background: var(--gray10);
   position: relative;
-  // height: 650px;
 
   &:after {
     content: '';
     position: absolute;
-    top: 0;
+    top: 80px;
     right: 0;
     border-left: 55vw solid transparent;
     border-top: 96px solid var(--white);
     width: 0;
 
+    @media (min-width: 424px) {
+      border-top: 50px solid var(--white);
+    }
+    
     @media (min-width: 576px) {
-      border-top: 300px solid var(--white);
+      border-top: 150px solid var(--white);
     }
 
     @media (min-width: 768px) {
