@@ -1,7 +1,7 @@
-import styles from './styles.module.scss'
-import { Row, Col } from 'antd'
 import Image from 'next/image';
 import Link from 'next/link';
+import { Row, Col } from 'antd'
+import styles from './styles.module.scss'
 
 function Footer() {
   return (

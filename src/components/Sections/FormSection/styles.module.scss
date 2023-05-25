@@ -1,8 +1,8 @@
+@import '@/styles/mixins.scss';
+
 .mainSection {
-  display: block;
-  margin: 0 auto;
-  max-width: 1440px;
-  min-width: 360px;
+  @include sectionContainer;
+  
   padding: 80px 16px 0 16px;
 
   @media (min-width: 576px) {
@@ -65,8 +65,6 @@
   margin: 0 auto;
   max-width: 1440px;
   min-width: 360px;
-  // background: var(--gray10);
-  // background-color: red;
   padding: 0 16px;
   color: var(--white);
   min-height: 340px;
@@ -82,18 +80,6 @@
   @media (min-width: 992px) {
     padding: 0 108px;
   }
-  
-  
-
-
-  // padding-bottom: 40px;
-
-  
-
-  // @media (min-width: 576px) {
-  //   padding-top: 80px;
-  // }
-
 
   .title {
     font-family: var(--darker);
