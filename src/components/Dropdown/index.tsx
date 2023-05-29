@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { MenuItems } from './MenuItems';
-import styles from './styles.module.css';
+import styles from './styles.module.scss';
 
 function Dropdown() {
   const [click, setClick] = useState(false);
@@ -11,7 +11,7 @@ function Dropdown() {
     <>
       <ul
         onClick={handleClick}
-        className={click ? styles.dropdownMenu.clicked : styles.dropdownMenu}
+        className={click ? `${styles.dropdownMenu} ${styles.clicked}` : styles.dropdownMenu}
       >
         {MenuItems.map((item, index) => {
           return (
