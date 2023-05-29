@@ -214,7 +214,7 @@ const LeadForm = () => {
 
           <ul className={styles.terms}>
             <li>
-                Ao criar minha conta estou de acordo com os <Link href={useTerms} target="_blank" className={styles.link}>termos de uso</Link> do software e <Link href={privacyPol} target="_blank" className={styles.link}>política de privacidade</Link>.
+                Ao criar minha conta estou de acordo com os <a href={useTerms} target="_blank" className={styles.link}>termos de uso</a> do software e <a href={privacyPol} target="_blank" className={styles.link}>política de privacidade</a>.
             </li>
             <li>
                 Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.
