@@ -25,7 +25,7 @@ function FormSection() {
       </div>
     </div>
      
-    <div className={styles.backgroundTwo}>
+    <div id='second-section' className={styles.backgroundTwo} >
       <div className={styles.secondSection}>
         <Row>
           <Col xs={24} md={14}>

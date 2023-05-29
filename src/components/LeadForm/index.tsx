@@ -40,9 +40,9 @@ const LeadForm = () => {
   }
 
   useEffect(() => {
-    let box = document.querySelector('.ant-row');
-    if (box !== null)  setHeightContainer(box.clientHeight)
-  }, [])
+    let box = document.getElementById('second-section');
+    if (box !== null)  setHeightContainer(box.clientHeight);
+  }, []);
 
   const scrollToUp = () => {
     const element = document.getElementById('form-container');
