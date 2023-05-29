@@ -1,9 +1,8 @@
-import { Checkbox, Form, Input, Select } from "antd";
-import styles from "./styles.module.scss";
-import Button from "@/components/Button";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { fetchLocalRegister, RegisterData } from "@/services/register";
-import Link from "next/link";
+import { Checkbox, Form, Input, Select, Spin } from "antd";
+import Button from "@/components/Button";
+import styles from "./styles.module.scss";
 
 const { Option } = Select;
 const positions = [
@@ -30,15 +29,39 @@ const LeadForm = () => {
 
   const [componentDisabled, setComponentDisabled] = useState<boolean>(true);
   const [postSucess, setPostSucess] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(false);
+  const [heightContainer, setHeightContainer] = useState<number>(0);
 
+  let successBannerStyle = {
+      height: `${heightContainer}px`,
+      display: 'flex',
+      justifyContent: 'center',
+      alignItems: 'center',
+  }
 
+  useEffect(() => {
+    let box = document.querySelector('.ant-row');
+    if (box !== null)  setHeightContainer(box.clientHeight)
+  }, [])
+
+  const scrollToUp = () => {
+    const element = document.getElementById('form-container');
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  }
+  
   const onFinish = async (values: RegisterData) => {
     try {
+      setLoading(true);
       const { data } = await fetchLocalRegister(values);
       setPostSucess(true);
-      alert(data.message);
+      scrollToUp();
     } catch (error) {
       console.log("Register error", error);
+      alert(error);
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -63,10 +86,10 @@ const LeadForm = () => {
   };
 
   return (
-    <div className={styles.container}>
+    <div id='form-container' className={styles.container} style={postSucess ? successBannerStyle : {}}>
       <div className={styles.formHeader}>
         {postSucess ? (
-          <div className={styles.title}>Obrigado! Entraremos em contato.</div>
+          <div className={`${styles.title} ${styles.clientRegistered}`}>Obrigado! <br/> Entraremos em contato. 😄</div>
         ) : (
           <>
             <div className={styles.title}>
@@ -225,9 +248,13 @@ const LeadForm = () => {
           </ul>
 
           <div className={styles.buttonContainer}>
-            <Button color="highligh" size="medium">
-              Criar minha conta
-            </Button>
+            {
+              loading ?
+                <Spin  size="large"/>
+              : <Button color="highligh" size="medium">
+                  Criar minha conta
+                </Button>
+            }
           </div>
         </Form>
       )}
