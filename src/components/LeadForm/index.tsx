@@ -3,9 +3,9 @@ import styles from "./styles.module.scss";
 import Button from "@/components/Button";
 import { useState } from "react";
 import { fetchLocalRegister, RegisterData } from "@/services/register";
+import Link from "next/link";
 
 const { Option } = Select;
-
 const positions = [
   "Sócio(a) / CEO / Proprietário(a)",
   "Diretor(a) de Vendas",
@@ -21,9 +21,16 @@ const positions = [
   "Estudante",
   "Outros Cargos",
 ];
+const useTerms = ' https://legal.rdstation.com/pt-BR/rdstation-services-agreement/';
+const privacyPol = ' https://legal.rdstation.com/pt/privacy-policy/';
+
 
 const LeadForm = () => {
   const [form] = Form.useForm();
+
+  const [componentDisabled, setComponentDisabled] = useState<boolean>(true);
+  const [postSucess, setPostSucess] = useState<boolean>(false);
+
 
   const onFinish = async (values: RegisterData) => {
     try {
@@ -47,9 +54,6 @@ const LeadForm = () => {
     }
     return Promise.resolve();
   };
-
-  const [componentDisabled, setComponentDisabled] = useState<boolean>(true);
-  const [postSucess, setPostSucess] = useState<boolean>(false);
 
   const handleCheckboxChange = (e: any) => {
     setComponentDisabled(e);
@@ -207,6 +211,18 @@ const LeadForm = () => {
               Ainda não tenho site
             </Checkbox>
           </Form.Item>
+
+          <ul className={styles.terms}>
+            <li>
+                Ao criar minha conta estou de acordo com os <Link href={useTerms} target="_blank" className={styles.link}>termos de uso</Link> do software e <Link href={privacyPol} target="_blank" className={styles.link}>política de privacidade</Link>.
+            </li>
+            <li>
+                Ao preencher o formulário, concordo em receber comunicações de acordo com meus interesses.
+            </li>
+            <li>
+                *Você pode alterar suas permissões de comunicação a qualquer tempo.
+            </li>
+          </ul>
 
           <div className={styles.buttonContainer}>
             <Button color="highligh" size="medium">

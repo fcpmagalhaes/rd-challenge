@@ -64,6 +64,23 @@
       }
   
     }
+
+    .terms {
+      margin: 24px 0 24px 0;
+      li {
+        color: var(--gray70);
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 150%;
+        margin-left: 10px;
+        .link {
+          color: var(--primary60);
+          text-decoration: underline;
+        }
+      }
+
+    }
     .buttonContainer {
       text-align: center;
       padding-bottom: 44px;
