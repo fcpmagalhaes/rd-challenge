@@ -81,7 +81,12 @@ function Footer() {
           </Col>
           <Col xs={{ span: 24, order: 4}} md={{ span: 12, order: 4}}>
           <div className={styles.privacity}>
-            © 2021 <b>RD Station.</b> <Link href='' className={styles.privacyLink}>Política de Privacidade.</Link>
+            <div>
+              © 2023 <b>Developed by:</b> <a href='https://www.linkedin.com/in/fcpmagalhaes/' target="_blank" className={styles.privacyLink}>Felipe Magalhães</a>
+            </div>
+            <div>
+              © 2021 <b>RD Station.</b> <a href=' https://legal.rdstation.com/pt/privacy-policy/' target="_blank"className={styles.privacyLink}>Política de Privacidade.</a>
+            </div>
             </div>
           </Col>
         </Row>
